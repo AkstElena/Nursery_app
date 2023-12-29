@@ -26,6 +26,25 @@ public class Nursery {
     db.add(humanFriend);
   }
 
+  public String getCommands(String name) {
+    for (HumanFriend el : db) {
+      if (el.getName().equals(name)) {
+        return el.getCommands();
+      }
+    }
+    return null;
+  }
+
+  public void setCommands(String name, String commands) {
+    for (int i = 0; i < db.size(); i++) {
+      if (db.get(i).getName().equals(name)) {
+        String result = db.get(i).getCommands();
+        result += ", " + commands;
+        db.get(i).setCommands(result);
+      }
+    }
+  }
+
   @Override
   public String toString() {
     String result = "Животные в питомнике:\n";

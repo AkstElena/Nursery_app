@@ -25,5 +25,9 @@ public interface DataService {
 
   Donkey createDonkey(String name, Calendar birthday, String commands);
 
-  ArrayList<HumanFriend> getHumanFriendList();
+  String getHumanFriendList();
+
+  String getCommands(String name);
+
+  void setCommands(String name, String commands);
 }

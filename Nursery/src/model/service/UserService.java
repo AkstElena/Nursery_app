@@ -17,8 +17,9 @@ public class UserService implements DataService {
 
   @Override
   public Camel createCamel(String name, Calendar birthday, String commands) {
-    // TODO Auto-generated method stub
-    return null;
+    Camel camel = new Camel(name, birthday, commands);
+    db.addHumanFriends(camel);
+    return camel;
   }
 
   @Override
@@ -30,31 +31,46 @@ public class UserService implements DataService {
 
   @Override
   public Dog createDog(String name, Calendar birthday, String commands) {
-    // TODO Auto-generated method stub
-    return null;
+    Dog dog = new Dog(name, birthday, commands);
+    db.addHumanFriends(dog);
+    return dog;
   }
 
   @Override
   public Donkey createDonkey(String name, Calendar birthday, String commands) {
-    // TODO Auto-generated method stub
-    return null;
+    Donkey donkey = new Donkey(name, birthday, commands);
+    db.addHumanFriends(donkey);
+    return donkey;
   }
 
   @Override
   public Hamster createHamster(String name, Calendar birthday, String commands) {
-    // TODO Auto-generated method stub
-    return null;
+    Hamster hamster = new Hamster(name, birthday, commands);
+    db.addHumanFriends(hamster);
+    return hamster;
   }
 
   @Override
   public Horse createHorse(String name, Calendar birthday, String commands) {
-    // TODO Auto-generated method stub
-    return null;
+    Horse horse = new Horse(name, birthday, commands);
+    db.addHumanFriends(horse);
+    return horse;
   }
 
-  public ArrayList<HumanFriend> getHumanFriendList() {
-    ArrayList<HumanFriend> usrList = db.getListHumanFriend();
-    return usrList;
+  @Override
+  public String getHumanFriendList() {
+    return db.toString();
+  }
+
+  @Override
+  public String getCommands(String name) {
+    return db.getCommands(name);
+  }
+
+  @Override
+  public void setCommands(String name, String commands) {
+    db.setCommands(name, commands);
+
   }
 
 }

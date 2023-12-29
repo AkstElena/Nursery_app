@@ -1,6 +1,5 @@
 package model.service;
 
-import java.util.ArrayList;
 import java.util.Calendar;
 
 import model.data.Camel;
@@ -9,7 +8,6 @@ import model.data.Dog;
 import model.data.Donkey;
 import model.data.Hamster;
 import model.data.Horse;
-import model.data.HumanFriend;
 
 public interface DataService {
 

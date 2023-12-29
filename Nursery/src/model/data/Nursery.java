@@ -32,16 +32,22 @@ public class Nursery {
         return el.getCommands();
       }
     }
-    return null;
+    return "Такого животного в питомнике нет";
   }
 
   public void setCommands(String name, String commands) {
+    boolean flag = true;
     for (int i = 0; i < db.size(); i++) {
       if (db.get(i).getName().equals(name)) {
         String result = db.get(i).getCommands();
         result += ", " + commands;
         db.get(i).setCommands(result);
+        System.out.print("Новая команда добавлена\n");
+        flag = false;
       }
+    }
+    if (flag) {
+      System.out.println("Такого животного в питомнике нет\n");
     }
   }
 

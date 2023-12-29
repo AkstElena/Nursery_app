@@ -1,6 +1,5 @@
 package Controller;
 
-import java.util.ArrayList;
 import java.util.Calendar;
 
 import model.data.Camel;

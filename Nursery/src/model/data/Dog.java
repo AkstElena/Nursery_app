@@ -1,4 +1,4 @@
-package Animal;
+package model.data;
 
 import java.util.Calendar;
 

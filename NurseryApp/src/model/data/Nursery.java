@@ -4,7 +4,7 @@ import java.util.ArrayList;
 
 public class Nursery {
 
-  ArrayList<HumanFriend> db;
+  private ArrayList<HumanFriend> db;
 
   public Nursery(ArrayList<HumanFriend> db) {
     this.db = db;
